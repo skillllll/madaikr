@@ -1,0 +1,63 @@
+<!--index.wxml--> 
+ <swiper class='swiperClass'  indicator-color="#a39f99" indicator-active-color="#f49641" indicator-dots  interval="2000" duration="1000" previous-margin="10rpx" next-margin="10rpx" circular bindchange="bindchange" style='height: 400rpx'>
+   <block wx:for="{{car_date}}" wx:key="{{index}}">
+     <swiper-item>
+       <view wx:if="{{item.flag==true&&item.sing_type=='gets_sing'}}" class="banner_box {{swiperIndex == index ? 'banner_active' : 'banner_quiet'}}">
+         <view class='banner_left'>
+           <view class='banner_car'>
+             <image src='{{img_car}}'></image>
+           </view>
+           <view class='banner_txt'>{{item.car_mark}}</view>
+           <view class='banner_up' bindtap='banner_up' data-index='{{index}}'>
+             <image src='{{img_updata}}'></image>
+           </view>
+         </view>
+         <view class='banner_right'>{{item.not_title_hint}}</view>
+         <view class='banner_dtime'>还有 <span>{{item.a_s_times}}</span>天就可以领取年检标啦</view>
+       </view>
+ <view wx:elif="{{item.flag==true&&item.sing_type=='heck_sing'}}" class="banner_box {{swiperIndex == index ? 'banner_active' : 'banner_quiet'}}">
+         <view class='banner_left'>
+           <view class='banner_car'>
+             <image src='{{img_car}}'></image>
+           </view>
+           <view class='banner_txt'>{{item.car_mark}}</view>
+           <view class='banner_up' bindtap='banner_up' data-index='{{index}}'>
+             <image src='{{img_updata}}'></image>
+           </view>
+         </view>
+         <view class='banner_right'>{{item.not_title_hint}}</view>
+         <view class='banner_dtime'>距离下次年检<span>{{item.a_s_times}}</span>天</view>
+       </view>
+
+       <view wx:elif="{{item.flag==false}}" class="banner_box {{swiperIndex == index ? 'banner_active' : 'banner_quiet'}}">
+         <view class='index_add' bindtap='car_add' data-index='{{index}}'>
+           <image src='{{img_add}}'></image>
+         </view>
+         <view class='add_txt' >点击添加我的车辆</view>
+       
+       </view>
+       <image src="{{imgUrls}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>
+       </image>
+
+     </swiper-item>
+   </block>
+ </swiper>
+<!-- <block wx:for="{{car_date}}" wx:key="{{index}}"> -->
+ <view class="com_but annual {{flags==true&&sing_type=='heck_sing'?'bg_c_green':'bg_c_gai'}}"bindtap='subscribe'>预约年检</view>
+ <view class="com_but annual_sign bg_c_green {{flags==true&&sing_type=='gets_sing'?'bg_c_green':'bg_c_gai'}}" bindtap='get_acting'>代领年检标</view>
+<!-- </block>  -->
+
+<block wx:if='{{m_show}}'>
+<view class='modai'>
+   <view class='modai_cont'>
+     <view class='m_title'>提示</view>
+     <view class='m_cont'>确认授权您将获得更好的服务</view>
+     <view class='m_but'>
+       <view class='m_but_right' bindtap='m_but_right'>
+        <button open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">确认</button>
+        </view>
+     </view>
+   </view>
+</view>
+</block>
+

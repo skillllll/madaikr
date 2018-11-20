@@ -1,0 +1,195 @@
+/**index.wxss**/
+.swiperClass { 
+  margin: 0;
+  margin-top: 10px;
+}
+ 
+.slide-image {
+  width: 100%; 
+  height: 90%;
+  border-radius: 10px;
+  position: relative;
+}
+ 
+image.active {
+  transform: none;
+  transition: all 0.2s ease-in 0s;
+} 
+ 
+image.quiet {
+  transform: scale(0.8333333);
+  transition: all 0.2s ease-in 0s;
+}
+swiper-item{
+  position: relative;
+}
+.banner_active{
+   transform: none;
+  transition: all 0.2s ease-in 0s;
+}
+.banner_quiet{
+  transform: scale(0.8333333);
+  transition: all 0.2s ease-in 0s;
+}
+.banner_box{
+  width: 98%;
+  height: 85%;
+  /* background: rgba(33,33,33,0.4); */
+  position: absolute;
+  box-sizing: border-box;
+  padding: 15rpx;
+  top: 0;
+  left: 10rpx;
+  z-index: 9;
+}
+.banner_left{
+  float: left;
+  width: 60%;
+  height: 20%;
+  margin-top:5%; 
+}
+.banner_car{
+  width: 26%;
+  height: 100%;
+}
+.banner_txt{
+  font-size: 30rpx;
+  line-height: 60rpx;
+}
+.banner_up{
+  width: 15%;
+  height: 100%;
+}
+.banner_up image{
+  float: right;
+  width: 80%;
+  height: 80%;
+}
+.banner_car image{
+  width: 80%;
+  height: 60%;
+}
+.banner_left view{
+  float: left;
+}
+.banner_right{
+  float: right;
+  width: 40%;
+  height: 20%;
+  margin-top:5%; 
+  font-size: 24rpx;
+  text-align: right;
+  line-height: 70rpx;
+}
+.banner_dtime{
+  width: 100%;
+  height: 80rpx;
+  text-align: center;
+  padding-top:30rpx; 
+  line-height: 150rpx;
+}
+.banner_dtime span{
+  font-size: 48rpx;
+  color: #46c819;
+}
+.index_add{
+  width: 10%;
+  height: 24%;
+  margin: 90rpx auto 20rpx;
+}
+.index_add image{
+  width: 100%;
+  height: 100%;
+}
+.add_txt{
+  width: 100%;
+  text-align: center;
+}
+.com_but{
+  width: 90%;
+  height: 80rpx;
+  border-radius: 15rpx;
+  text-align: center;
+  line-height: 80rpx;
+  box-shadow: 5rpx 5rpx 5rpx #ccc;
+  margin: 0 auto;
+  color: #fff;
+}
+.annual{
+  position: fixed;
+  bottom: 260rpx;
+  left: 50%;
+  margin-left: -45%;
+}
+.annual_sign{
+  position: fixed;
+  left: 50%;
+  margin-left: -45%;
+  bottom: 140rpx;
+ 
+}
+.bg_c_green{
+ background: #46c819;
+}
+.bg_c_gai{
+  background: #c2c2c2;
+}
+
+.modai{
+  width: 100%;
+  height: 100%;
+  background: rgba(33,33,33,0.6);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+}
+.modai_cont{
+  width: 80%;
+  height: 300rpx;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 8rpx;
+  box-shadow: 2rpx 2rpx 2rpx #ccc;
+  margin-top: 260rpx;
+  overflow: hidden;
+}
+.m_title{
+  width: 100%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 38rpx;
+  margin-top: 10rpx;
+}
+.m_cont{
+  width: 100%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 34rpx;
+  color: #b5b5b5;
+  margin-top: 10rpx;
+}
+.m_but{
+  width: 100%;
+  height: 80rpx;
+  margin-top: 35rpx;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+   border-top: 1rpx solid #ccc;
+}
+button::after {
+   outline:none;
+   border:none;
+   list-style: none;
+}
+.m_but_right button{
+  width: 175rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  color: #46c819;
+}
